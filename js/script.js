@@ -28,7 +28,9 @@ function register(event) {
         xhttp.open("GET", `http://92.222.69.104:80/todo/create/${pseudo}/${mdp}`, true);
         xhttp.send();
     } else {
+        document.getElementById('mdp').style.border = "solid 1px red"
         document.getElementById('mdpConfir').style.border = "solid 1px red"
+        document.getElementById("box-register-error").style.visibility = "initial"
     }
 }
 
@@ -41,11 +43,15 @@ function login(event) {
         if (data.target.readyState == 4 && data.target.status == 200) {
             console.log(data)
             console.log("Juste")
-        } else if (data.target.status == 500) {}
+            document.getElementById("list").style.display = "inline";
+        } else if (data.target.status == 500) {
+            document.getElementById("box-login-error").style.visibility = "initial"
+            document.getElementById('logMdp').style.border = "solid 1px red"
+            document.getElementById('logPseudo').style.border = "solid 1px red"
+        }
     };
     xhttp.open("GET", "http://92.222.69.104:80/todo/listes", true);
     xhttp.setRequestHeader("login", pseudoLog);
     xhttp.setRequestHeader("password", mdpLog);
-    xhttp.send();
-
+    xhttp.send()
 }

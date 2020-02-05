@@ -11,7 +11,7 @@
     <link rel="stylesheet" href="../css/style.css">
     <script src="../js/script.js"></script>
 
-    <title>Article gérant</title>
+    <title>Gérer des listes ?</title>
 </head>
 
 <body>
@@ -20,6 +20,7 @@
             <label><h1>Se connecter</h1></label>
             <input id="logPseudo" type="text" placeholder="Pseudonyme" required/>
             <input id="logMdp" type="password" placeholder="Mot de passe" required/>
+            <h3 id="box-login-error">Les identifiants n'existent pas</h3>
             <button>Connexion</button>
         </form>
         <button onclick="showRegister()">Pas encore inscrit ? Cliquez ici</button>
@@ -31,9 +32,21 @@
             <input id="pseudo" type="text" placeholder="Pseudonyme" required />
             <input id="mdp" type="password" placeholder="Mot de passe" required />
             <input id="mdpConfir" type="password" placeholder="Confirmer : 'Mot de passe'" required />
+            <h3 id="box-register-error">Les mots de passe ne correspondent pas</h3>
             <button>Inscription</button>
         </form>
         <button onclick="showLogin()">Déjà inscrit ? Cliquez ici</button>
+    </div>
+
+    <div id="list">
+        <div class="liste">
+            <div class="liste-blanche">
+                <div class="article-liste">
+
+                </div>
+                <button>+</button>
+            </div>
+        </div>
     </div>
 </body>
 

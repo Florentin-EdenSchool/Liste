@@ -4,34 +4,12 @@ body {
     background: rgba(0, 0, 0, 0.397);
 }
 
-#liste {
-    padding-top: 40px;
-    padding-left: 50px;
-}
-
-#liste .white {
-    background-color: #313636;
-}
-
-#liste .liste-conf {
-    height: 455px;
-    border-radius: 10px;
-}
-
-#liste .liste-conf button {
-    font-size: 30px;
-    font-family: arial;
-    padding: 0;
-    border: 0;
-    background-color: #f8f9f9;
-    margin: 10 auto 10 auto;
-}
-
 .box {
     font-family: Helvetica;
     padding: 30px 0px;
+    width: 100%;
+    height: 100%;
     color: white;
-    display: inline;
     -webkit-animation: fade 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94) both;
     animation: fade 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94) both;
 }
@@ -48,12 +26,25 @@ body {
     margin: 20px auto;
     padding: 15px;
     background: rgba(0, 0, 0, 0.2);
+    color: #fff;
     border: 0;
-    color: white;
+    border: solid 1px white;
+}
+
+.box input::-webkit-input-placeholder {
+    color: #fff;
+}
+
+.box input:-ms-input-placeholder {
+    color: #fff;
+}
+
+.box input::-ms-input-placeholder {
+    color: #fff;
 }
 
 .box input::placeholder {
-    color: white;
+    color: #fff;
 }
 
 .box input:focus,
@@ -79,8 +70,20 @@ body {
     background: #2e6085;
 }
 
+.box h3 {
+    color: red;
+    opacity: 0.7;
+    text-align: center;
+    font-size: 15px;
+}
+
 #box-register {
     display: none;
+}
+
+#box-login-error,
+#box-register-error {
+    visibility: hidden;
 }
 
 @-webkit-keyframes fade {
@@ -110,4 +113,30 @@ body {
 }
 
 
-/*# sourceMappingURL=style.css.map */
+/*#list {
+    display: none;
+}*/
+
+
+/*#list {
+    display: none;
+}*/
+
+.liste-blanche {
+    margin-left: 50px;
+    background-color: white;
+    width: 350px;
+    height: 600px;
+    border-radius: 5px;
+}
+
+.article-liste {
+    width: 100%;
+    height: 90px;
+    border-bottom: 1px solid lightgray;
+}
+
+.liste-blanche button {
+    text-align: center;
+    font-size: 30px;
+}
