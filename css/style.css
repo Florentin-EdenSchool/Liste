@@ -1,7 +1,17 @@
+* {
+    transition: 0.3s;
+}
+
 body {
     padding: 0;
     margin: 0;
-    background: rgba(0, 0, 0, 0.397);
+    background: #a7c1d4;
+}
+
+textarea {
+    resize: none;
+    padding-top: 10px;
+    padding-bottom: 10px;
 }
 
 .box {
@@ -18,6 +28,13 @@ body {
     text-align: center;
     margin: 30px 0;
     font-size: 30px;
+}
+
+.box h3 {
+    color: red;
+    opacity: 0.7;
+    text-align: center;
+    font-size: 15px;
 }
 
 .box input {
@@ -70,13 +87,6 @@ body {
     background: #2e6085;
 }
 
-.box h3 {
-    color: red;
-    opacity: 0.7;
-    text-align: center;
-    font-size: 15px;
-}
-
 #box-register {
     display: none;
 }
@@ -84,6 +94,112 @@ body {
 #box-login-error,
 #box-register-error {
     visibility: hidden;
+}
+
+
+/*#liste {
+    display: none;
+}*/
+
+.liste {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.liste-blanche {
+    margin: 50px;
+    background-color: white;
+    width: 350px;
+    height: 500px;
+    margin-top: 200px;
+}
+
+.liste-remove {
+    background-color: rgb(248, 73, 73);
+    text-align: center;
+    height: 50px;
+    font-size: 30px;
+    color: white;
+    user-select: none;
+    cursor: pointer;
+}
+
+.liste-remove:hover {
+    background-color: rgb(209, 57, 57);
+}
+
+.liste-article {
+    width: 100%;
+    height: 90px;
+    height: 100%;
+    width: 100%;
+    overflow-y: auto;
+    overflow-x: hidden;
+}
+
+.liste-blanche a {
+    font-size: 30px;
+    text-decoration: none;
+}
+
+.liste-blanche a div {
+    background-color: #378dcc;
+    padding: 8px;
+    text-align: center;
+    color: white;
+    font-weight: bold;
+    user-select: none;
+    cursor: pointer;
+}
+
+.liste-blanche a div:hover {
+    background-color: #2e6085;
+}
+
+.liste-texte {
+    color: white;
+    background-color: #378dcc;
+    text-align: center;
+    min-height: 50px;
+    border: solid 5px white;
+}
+
+.liste-input {
+    color: white;
+    background-color: #2e6085;
+    text-align: center;
+    text-decoration: none;
+    width: 100%;
+    border: none;
+    margin-top: 5px;
+    margin-bottom: 5px;
+}
+
+.add-liste {
+    margin: 50px;
+    background-color: white;
+    width: 350px;
+    height: 594px;
+    background-color: #2e6085;
+    margin-top: 200px;
+}
+
+.add-liste a {
+    font-size: 30px;
+    text-decoration: none;
+}
+
+.add-liste a div {
+    background-color: #378dcc;
+    margin-top: 230px;
+    padding: 30px;
+    text-align: center;
+    color: white;
+    font-weight: bold;
+    user-select: none;
+    cursor: pointer;
 }
 
 @-webkit-keyframes fade {
@@ -110,33 +226,4 @@ body {
         transform: translateZ(0);
         opacity: 1;
     }
-}
-
-
-/*#list {
-    display: none;
-}*/
-
-
-/*#list {
-    display: none;
-}*/
-
-.liste-blanche {
-    margin-left: 50px;
-    background-color: white;
-    width: 350px;
-    height: 600px;
-    border-radius: 5px;
-}
-
-.article-liste {
-    width: 100%;
-    height: 90px;
-    border-bottom: 1px solid lightgray;
-}
-
-.liste-blanche button {
-    text-align: center;
-    font-size: 30px;
 }

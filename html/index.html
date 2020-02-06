@@ -38,13 +38,19 @@
         <button onclick="showLogin()">Déjà inscrit ? Cliquez ici</button>
     </div>
 
-    <div id="list">
+    <div id="liste">
         <div class="liste">
             <div class="liste-blanche">
-                <div class="article-liste">
-
+                <div class="liste-article">
                 </div>
-                <button>+</button>
+                <a onclick="addPraListe(event)">
+                    <div>+</div>
+                </a>
+            </div>
+            <div class="add-liste">
+                <a onclick="addListe()">
+                    <div>+</div>
+                </a>
             </div>
         </div>
     </div>
