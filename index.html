@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <script src="https://kit.fontawesome.com/faeec2da2d.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+    <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
+
+    <link rel="stylesheet" href="../css/style.css">
+    <script src="../js/script.js"></script>
+
+    <title>Gérer des listes ?</title>
+</head>
+
+<body>
+    <div class="box" id="box-login">
+        <form onsubmit="login(event)">
+            <h1>Se connecter</h1>
+            <input id="logPseudo" type="text" placeholder="Pseudonyme" required/>
+            <input id="logMdp" type="password" placeholder="Mot de passe" required/>
+
+            <h3 id="box-login-error"></h3>
+            <button>Connexion</button>
+        </form>
+        <button onclick="showRegister()">Pas encore inscrit ? Cliquez ici</button>
+    </div>
+
+
+    <div class="box" id="box-register">
+        <form onsubmit="register(event)">
+            <h1>S'enregistrer</h1>
+            <input id="pseudo" type="text" placeholder="Pseudonyme" required />
+            <input onkeypress="appMdp(event)" id="mdp" type="password" placeholder="Mot de passe" required />
+            <input onkeypress="appMdp(event)" id="mdpConfir" type="password" placeholder="Confirmer : 'Mot de passe'" required />
+            <div class="container">
+                <div class="row justify-content-center">
+                    <div class="progress col-3">
+                        <div id="bar" class="progress-bar bg-danger" role="progressbar" style="width: 25%" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100"></div>
+                    </div>
+                </div>
+            </div>
+            <h3 id="box-register-error"></h3>
+            <button>Inscription</button>
+        </form>
+        <button onclick="showLogin()">Déjà inscrit ? Cliquez ici</button>
+    </div>
+
+    <div id="liste">
+        <div class="liste">
+            <div class="liste-blanche">
+            </div>
+            <div class="add-liste">
+                <a onclick="addListe(event)">
+                    <div>+</div>
+                </a>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>

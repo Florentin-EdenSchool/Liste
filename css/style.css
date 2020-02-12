@@ -14,6 +14,11 @@ textarea {
     padding-bottom: 10px;
 }
 
+.progress {
+    padding: 0;
+    width: 500px;
+}
+
 .box {
     font-family: Helvetica;
     padding: 30px 0px;
@@ -25,12 +30,13 @@ textarea {
 }
 
 .box h1 {
+    margin-top: 50px;
     text-align: center;
-    margin: 30px 0;
     font-size: 30px;
 }
 
 .box h3 {
+    padding-top: 5px;
     color: red;
     opacity: 0.7;
     text-align: center;
@@ -91,15 +97,9 @@ textarea {
     display: none;
 }
 
-#box-login-error,
-#box-register-error {
-    visibility: hidden;
-}
-
-
-/*#liste {
+#liste {
     display: none;
-}*/
+}
 
 .liste {
     display: flex;
@@ -177,11 +177,23 @@ textarea {
     margin-bottom: 5px;
 }
 
+.liste-input-remove {
+    width: 20px;
+    height: 30px;
+    background-color: rgb(248, 73, 73);
+    text-align: center;
+    margin: 0 auto;
+    width: 100px;
+    cursor: pointer;
+    user-select: none;
+    margin-bottom: 5px;
+}
+
 .add-liste {
     margin: 50px;
     background-color: white;
     width: 350px;
-    height: 594px;
+    height: 600px;
     background-color: #2e6085;
     margin-top: 200px;
 }
@@ -193,13 +205,29 @@ textarea {
 
 .add-liste a div {
     background-color: #378dcc;
-    margin-top: 230px;
+    margin-top: 260px;
     padding: 30px;
     text-align: center;
     color: white;
     font-weight: bold;
     user-select: none;
     cursor: pointer;
+}
+
+.fa-trash {
+    color: white;
+    font-size: 13px;
+}
+
+.liste-article-title {
+    margin: 0 auto;
+    text-align: center;
+    display: block;
+    margin-top: 10px;
+    text-decoration: none;
+    color: white;
+    background-color: #378dcc;
+    border: 1px solid #2e6085;
 }
 
 @-webkit-keyframes fade {
